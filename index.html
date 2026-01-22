@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生命密碼：看懂你的人生議題</title>
+    <title>生命密碼：看懂你的人生劇本</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* --- 視覺風格定義 --- */
@@ -42,8 +42,8 @@
         .input-item { text-align: left; }
         label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 0.9em; color: #636e72; }
         input { padding: 12px; border: 1px solid #b2bec3; border-radius: 6px; font-size: 16px; width: 150px; }
-        button { background-color: var(--accent); color: white; border: none; padding: 12px 40px; font-size: 16px; border-radius: 6px; cursor: pointer; height: 48px; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(192, 57, 43, 0.3); }
-        button:hover { background-color: #d35400; transform: translateY(-2px); }
+        button { background-color: #808000; color: white; border: none; padding: 12px 40px; font-size: 16px; border-radius: 6px; cursor: pointer; height: 48px; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(192, 57, 43, 0.3); }
+        button:hover { background-color: #b8860b; transform: translateY(-2px); }
 
         /* 上半部容器：左邊數據 + 右邊矩陣 */
         .top-section {
@@ -312,12 +312,12 @@
             border-top: 1px dashed #dcdde1;
         }
 
-        .btn-portaly {
+        .btn-portaly-r {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            background: linear-gradient(135deg, #a1887f 0%, #5d4037 100%); /* 配合網頁的亮橘金色系 */
+            background: linear-gradient(135deg, #b22222 0%,  #bc8f8f 100%); /* 乾燥玫瑰 */
             color: white;
             padding: 10px 30px;
             border-radius: 50px;
@@ -328,6 +328,24 @@
             transition: transform 0.2s;
             margin-bottom: 20px;
         }
+        .btn-portaly-b {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #808000 0%, #b8860b  100%); /* 配合網頁的亮橘金色系 */
+            color: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.0em;
+            box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+
+
         .btn-portaly:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(93, 64, 55, 0.3);
@@ -363,9 +381,13 @@
             }
             .input-item {
                 width: 95%;
+                max-width: 400px;  /* (選用) 用電腦看時不要無限變寬，限制最大 400px */
+                margin: 10px auto; /* 上下留 10px，左右自動置中 (關鍵！) */
             }
             input, button {
-                width: 95%; /* 讓輸入框和按鈕填滿手機寬度 */
+                width: 100%; /* 讓輸入框和按鈕填滿手機寬度 */
+                box-sizing: border-box; 
+                padding: 10px;     /* 增加一點內距比較好看 */
             }
         
             /* 3. 上半部核心命盤與九宮格：強制垂直排列 */
@@ -468,7 +490,7 @@
             <label>西元出生日期</label>
             <input type="date" id="birthdate">
         </div>
-        <button onclick="analyze()">看看我是幾號人</button>
+        <button onclick="analyze()">了解我的生命角色劇本</button>
     </div>
 
     <div id="output">
@@ -549,7 +571,7 @@
         </div>
 
         <div class="donate-section">
-            <h3 style="color:#2f3640; margin-bottom:10px;">🌱 喜歡這個分析嗎？</h3>
+            <h3 style="color:#2f3640; margin-bottom:10px;">🌱 想更深入的了解自己的角色劇本使用指南嗎？活出理所當然的自己，借力使力不費力，爽爽體驗人生！</h3>
             <p style="color:#7f8c8d; margin-bottom: 10px;">
                 如果覺得準確或有幫助，歡迎小額贊助，支持開發更多功能！
             </p>
@@ -557,14 +579,14 @@
                 如果想了解更多密碼解析或意識探索，歡迎到358意識實驗樹預約！
             </p>
             
-            <a href="https://portaly.cc/lab358" target="_blank" class="btn-portaly">
+            <a href="https://portaly.cc/lab358" target="_blank" class="btn-portaly-b">
                 <i class="fas fa-gift"></i> 前往 358意識實驗樹🌳
             </a>
             <p style="color:#7f8c8d; margin-bottom:10px;">
-                更多生命與意識解構相關更專業的專項 或更深入的專項，歡迎和我的老師Amy ChiChi預約！
+                更多生命與意識解構相關更專業的專項或更深入的專項，歡迎和我的老師Amy ChiChi預約！
             </p>
             
-            <a href="https://portaly.cc/amychichi777" target="_blank" class="btn-portaly">
+            <a href="https://portaly.cc/amychichi777" target="_blank" class="btn-portaly-r">
                 <i class="fas fa-gift"></i> 前往了解 Amy ChiChi 老師
             </a>
 
